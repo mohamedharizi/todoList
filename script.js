@@ -16,7 +16,7 @@ let li;
 function createElementLi() {
     li = document.createElement('li');
 }
-​// creation de la fonction qui créé l'espace disponible pour la valeur de l'input
+​// creation de la fonction qui créé l'espace disponible pour la valeur "li"
 function addInputValueinLi() {
     li.append(document.createTextNode(input.value));
     
