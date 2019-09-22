@@ -1,6 +1,8 @@
 
 
 
+
+
 ​
 ​// Déclarations (let et const)
 const input = document.querySelector("input");
@@ -33,6 +35,11 @@ function resetInput() {
     input.value = "";
 }
 
+//fonction qui met la premiere lettre du mot en lettre capital
+function CapitalizeText() {
+    return input.value[0].toUpperCase() ;
+}
+
 // creation de la fonction filtre de la touche entrée
 function getInputValueEnter(key) {
     if (key.keyCode === 13) {
@@ -47,7 +54,10 @@ function addItemOnMyTodo() {
     createElementLi();
     addInputValueinLi();
     insertElementLiInUL();
+    CapitalizeText();
     resetInput();
+    
+    
     
 }
 ​
@@ -56,3 +66,4 @@ function addItemOnMyTodo() {
 // execution des fonctions
 button.addEventListener("click", addItemOnMyTodo); // execution par le click
 input.addEventListener("keypress", getInputValueEnter); // execution par le bouton entrée
+
