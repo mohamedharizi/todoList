@@ -1,5 +1,6 @@
 
 
+
 ​
 ​// Déclarations (let et const)
 const input = document.querySelector("input");
@@ -16,7 +17,7 @@ let li;
 function createElementLi() {
     li = document.createElement('li');
 }
-​// creation de la fonction qui créé l'espace disponible pour la valeur "li"
+​// creation de la fonction qui créé l'espace disponible pour la valeur de l'input
 function addInputValueinLi() {
     li.append(document.createTextNode(input.value));
     
@@ -32,7 +33,13 @@ function resetInput() {
     input.value = "";
 }
 
-
+// creation de la fonction filtre de la touche entrée
+function getInputValueEnter(key) {
+    if (key.keyCode === 13) {
+        addItemOnMyTodo();
+    }
+}
+​
 
 ​// creation de la fonction globale qui regroupe toutes les fonctions nécessaires
 function addItemOnMyTodo() {
@@ -44,13 +51,7 @@ function addItemOnMyTodo() {
     
 }
 ​
-// creation de la fonction filtre de la touche entrée
-function getInputValueEnter(key) {
-    if (key.keyCode === 13) {
-        addItemOnMyTodo();
-    }
-}
-​
+
 
 // execution des fonctions
 button.addEventListener("click", addItemOnMyTodo); // execution par le click
