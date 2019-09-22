@@ -25,7 +25,7 @@ function addInputValueinLi() {
     
 }
 ​
-// creation de la fonction qui va inserer la valeur de l'input dans le "ul"
+// creation de la fonction qui va inserer l'element "li" dans le "ul"
 function insertElementLiInUL() {
     ul.insertAdjacentElement('beforeend', li);
 }
